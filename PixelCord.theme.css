@@ -1,0 +1,228 @@
+/**
+ * @name Pixelcord
+ * @author ! anime kid#0838
+ * @version 3.4.1 (modded)
+ * @description Material Design Theme with numerous enhancements for Discord
+ * @source https://github.com/hyblocker/pixelcord
+ * @updateUrl https://raw.githubusercontent.com/hyblocker/pixelcord/main/Pixelcord.theme.css
+ * @modding animecoder2115
+*/
+/*
+    SETTINGS IMPORTANT !!!!!
+*/
+/* Enhancements | Modal Blur - Blurs the black tinted background behind modals like image previews if enabled */
+/* @import url(https://hyblocker.github.io/pixelcord/modules/enhancements/background_blur.css); */
+/* Enhancements | Rounded Corners - Adds rounded corners to the Discord window (assuming either Glasscord or Acryllic are present) */
+/* @import url(https://hyblocker.github.io/pixelcord/modules/enhancements/rounded_corners.css); */
+/* Enhancements | Translucent - Makes discord transparent (works best with Glasscord and Acryllic) */
+/* @import url(https://hyblocker.github.io/pixelcord/modules/enhancements/translucent.css); */
+/* Functions | Collapsing channels list - Channels list collapses and uncollapses on hover, giving you more room to read */
+/* @import url(https://hyblocker.github.io/pixelcord/modules/functions/hover_channels.css); */
+/* Functions | Collapsing members list - Members list collapses and uncollapses on hover, giving you more room to read */
+@import url(https://hyblocker.github.io/pixelcord/modules/functions/hover_members.css); 
+/* Functions | macOS Buttons - Replaces window buttons with macOS style buttons (Windows) */
+/* @import url(https://hyblocker.github.io/pixelcord/modules/functions/macos_buttons.css); */
+/* Functions | Channel Icons - Make channels change icon based on what they're called! (eg #github would have a github icon instead of #) */
+ @import url(https://hyblocker.github.io/pixelcord/modules/functions/channel_icons.css); 
+/* Functions | Context Menu Icons - Adds icons to right click menus */
+ @import url(https://hyblocker.github.io/pixelcord/modules/functions/context_icons.css); 
+/*
+*/
+/*
+NOTE: You can use other themes but it must be just a background not the entire discord is themed/modded
+*/
+/*
+    EXTERNAL MODULES
+*/
+/* Add-Ons | Discolored - Colorize Discord's boring SVGs! */
+@import url(https://nyri4.github.io/Discolored/main.css);
+/* Add-Ons | BadgesEverywhere - Colored Badges */
+ @import url(https://mr-miner1.github.io/Better-Badges/src/badges.css); 
+/* Add-Ons | BadgesEverywhere - White Badges */
+/* @import url(https://mr-miner1.github.io/Better-Badges/src/whitebadges.css); */
+ @import url(https://monstrousdev.github.io/themes/black-hole/style.css);
+/*
+    DO NOT REMOVE
+*/
+@import url(https://hyblocker.github.io/pixelcord/dist.css);
+/*
+    VARIABLES
+*/
+[data-popout-root].newBrand,
+html.newBrand,
+:root {
+  /* Rounded corners required for this setting to have effect */
+  --window-roundedness: 4px;
+  --snackbar-bg: rgb(62, 113, 255);
+  --snackbar-shadow: 0 1px 4px -2px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+  --snackbar-radius: 4px;
+  --snackbar-height: 30px;
+  --snackbar-padding: 12px 13px;
+  --switch-knob-color: rgba(229, 229, 229);
+  --switch-slider-color: rgba(200, 200, 200, 0.64);
+  --button-radius: 4px;
+  --background-blur-intensity: 5px;
+  --chatbox-top-padding: 13px;
+  --header-weight: 600;
+  --subtitle-weight: 500;
+  --section-weight: 900;
+  --font-header: "Google Sans", "Migu 1M", sans-serif;
+  --font-code: "Roboto Mono", monospace;
+  --font-primary: var(--font-header);
+  --font-secondary: var(--font-header);
+  --font-display: var(--font-header);
+  --card-padding: 12px;
+  --channels-width: 300px;
+  --pip-width: 320px;
+  --pip-radius: 12px;
+  --tooltip-bg: #575757;
+  --tooltip-text: #fefefe;
+  --checkbox-size: 13px;
+  --settings-list-width: 316px;
+  --settings-padding: 8px;
+  --settings-header-height: 84px;
+  --members-width: 240px;
+  --wallpaper: url("https://cdn.discordapp.com/attachments/861011844553244685/877485732783063050/1623950302486.jpg");
+  --blur-strength: 4px;
+  --window-border: 0px;
+}
+
+/* Light Theme main */
+
+.theme-light {
+  --accent: var(--primary-700);
+  --accent-selected-highlight: rgba(28, 116, 233, 12%);
+  --accent-highlight: var(--primary-500);
+  --accent-text: white;
+  --text-semidark: rgb(149, 149, 149);
+  --baseline: #f8f9fa;
+  --chip: rgb(172, 172, 172);
+  --chip-active: #c7c7c7;
+  --chip-text: rgb(53, 53, 53);
+  --navdrawer-color: var(--card-2-bg);
+  --navdrawer-hover: rgba(0, 0, 0, 0.05);
+  --navdrawer-active: rgba(0, 0, 0, 0.1);
+  --navdrawer-separator: rgba(0, 0, 0, 0.1);
+  --separator: rgba(0, 0, 0, 0.18);
+  --combobox-outline: rgba(0, 0, 0, 0.1);
+  --title-color: #606060;
+  --list-color: #202124;
+  --logo-color: #202124;
+  --header-color: #202124;
+  --interactive-muted: #8f929c;
+  --channels-default: #46494c;
+  --ripple-default: rgba(0, 0, 0, 0.36);
+  --danger: rgb(254, 68, 68);
+  --danger-highlight: rgb(251, 126, 126);
+  --online: #39b97b;
+  --online-highlight: #3dc382;
+  --idle: #959292;
+  --dnd: var(--danger);
+  --stream: #613aa5;
+  --offline: #474747;
+}
+
+/* Dark Theme main */
+
+.callContainer-36WRfH,
+.theme-dark {
+  --accent: var(--primary-400);
+  --accent-selected-highlight: rgba(52, 164, 255, 12%);
+  --accent-highlight: var(--primary-200);
+  --accent-text: white;
+  --baseline: #272a2b;
+  --chip: #595A5E;
+  --chip-active: #737479;
+  --chip-text: rgb(227, 227, 227);
+  --navdrawer-color: var(--card-2-bg);
+  --navdrawer-hover: rgba(255, 255, 255, 0.05);
+  --navdrawer-active: rgba(255, 255, 255, 0.1);
+  --navdrawer-separator: rgba(255, 255, 255, 0.1);
+  --separator: rgba(255, 255, 255, 0.18);
+  --combobox-outline: rgba(255, 255, 255, 0.1);
+  --title-color: #aaa;
+  --list-color: #fff;
+  --logo-color: rgb(220, 220, 220);
+  --header-color: #fff;
+  --interactive-muted: #6b6b6b;
+  --channels-default: #9b9fa5;
+  --ripple-default: rgba(255, 255, 255, 0.36);
+  --danger: rgb(248, 9, 129);
+  --danger-highlight: rgb(255, 0, 0);
+  --online: #00ff84;
+  --online-highlight: #00ff84;
+  --idle: #ffdf5f;
+  --dnd: var(--danger);
+  --stream: #9f67ff;
+  --offline: #070707;
+}
+
+:root {
+  --chip-height: 18px;
+}
+
+/* Light Theme colors */
+
+.theme-light {
+  --card-0-bg: rgb(231, 230, 230, 0.695);
+  --card-1-bg: white;
+  --card-2-bg: rgba(255, 255, 255, 0.695);
+  --card-3-bg: white;
+  --card-4-bg: white;
+  --card-5-bg: white;
+  --card-6-bg: white;
+  --card-7-bg: white;
+  --card-8-bg: white;
+  --card-9-bg: white;
+  --card-10-bg: white;
+  --card-11-bg: white;
+  --card-12-bg: white;
+  --card-13-bg: white;
+  --card-14-bg: white;
+  --card-15-bg: white;
+  --card-16-bg: white;
+  --card-17-bg: white;
+  --card-18-bg: white;
+  --card-19-bg: white;
+  --card-20-bg: white;
+  --card-21-bg: white;
+  --card-22-bg: white;
+  --card-23-bg: white;
+  --card-24-bg: white;
+}
+
+/* Dark Theme colors */
+
+.callContainer-36WRfH,
+.theme-dark {
+  --card-0-bg: rgb(25, 25, 25);
+  --card-1-bg: rgb(25, 25, 25);
+  --card-2-bg: rgb(25, 25, 25);
+  --card-3-bg: rgba(25, 25, 25, 0.675);
+  --card-4-bg: rgb(25, 25, 25);
+  --card-5-bg: rgb(25, 25, 25);
+  --card-6-bg: rgb(25, 25, 25);
+  --card-7-bg: rgb(25, 25, 25);
+  --card-8-bg: rgb(25, 25, 25);
+  --card-9-bg: rgba(25, 25, 25, 0.565);
+  --card-10-bg: rgb(25, 25, 25);
+  --card-11-bg: rgb(25, 25, 25);
+  --card-12-bg: rgb(25, 25, 25);
+  --card-13-bg: rgb(25, 25, 25);
+  --card-14-bg: rgb(25, 25, 25);
+  --card-15-bg: rgb(25, 25, 25);
+  --card-16-bg: rgb(35, 35, 35);
+  --card-17-bg: rgb(24, 24, 24);
+  --card-18-bg: rgb(25, 25, 25);
+  --card-19-bg: rgb(25, 25, 25);
+  --card-20-bg: rgb(25, 25, 25);
+  --card-21-bg: rgb(25, 25, 25);
+  --card-22-bg: rgb(25, 25, 25);
+  --card-23-bg: rgb(25, 25, 25);
+  --card-24-bg: rgb(25, 25, 25);
+}
+
+:root {
+  --verzjoni_0: true;
+  --verzjoni_1: true;
+}
